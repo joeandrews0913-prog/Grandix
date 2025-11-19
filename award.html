@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grandix Magazine | Grandix International</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Smooth Scroll -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Parallax banner - magazine page */
+.magazine-parallax {
+  position: relative;
+  overflow: hidden;
+  min-height: 380px;               /* adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  margin-top: 80px;                /* keep space for fixed header */
+  border-radius: 6px;
+}
+
+/* background layer (moved via JS) */
+.magazine-parallax .parallax-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  will-change: transform;
+  transform: translateY(0);
+  transition: transform 0.08s linear;
+  filter: saturate(0.95) contrast(1.02);
+}
+
+/* dark overlay so text is readable */
+.magazine-parallax::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.55));
+  pointer-events: none;
+}
+
+/* content sits above the background */
+.magazine-parallax .parallax-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  padding: 36px 20px;
+}
+
+.magazine-parallax h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin: 0 0 10px;
+  color: #fff;
+}
+
+.magazine-container h1::after,
+.magazine-container h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 8px auto 0;
+    border-radius: 2px;
+    }
+
+.magazine-parallax .lead {
+  color: rgba(255,255,255,0.92);
+  margin-bottom: 16px;
+}
+
+/* smaller screens: simpler layout, disable heavy transforms */
+@media (max-width: 900px) {
+  .magazine-parallax { min-height: 240px; margin-top: 64px; border-radius: 0; }
+  .magazine-parallax .parallax-bg { transform: none !important; background-attachment: scroll; }
+  .magazine-parallax h1 { font-size: 1.5rem; }
+}
+
+    .magazine-container {
+      max-width: 900px;
+      margin: 130px auto 60px;
+      padding: 0 20px;
+    }
+    .magazine-container h1 {
+      text-align: center;
+      color: var(--navy);
+      margin-bottom: 15px;
+    }
+    .magazine-container p {
+      line-height: 1.7;
+      font-size: 1.05rem;
+      margin-bottom: 15px;
+      color: #222;
+    }
+    .magazine-gallery {
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 18px;
+    }
+    .magazine-gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      object-fit: cover;
+    }
+    .back-btn {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    /* Gold accent underline for headers */
+    
+
+    /* Fade-in animation */
+    .fade-in {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER (same as your main site) -->
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="index.html#home">
+      <div class="brand-logo">GRANDIX</div>
+      <div class="brand-sub">INTERNATIONAL</div>
+    </a>
+
+    <button id="mobile-menu" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#stonepark">Stonepark Media</a></li>
+        <li><a href="index.html#magazine">Magazine</a></li>
+        <li><a href="index.html#awards">Awards</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="magazine-container">
+
+  <h1>About the Grandix Magazine</h1>
+
+  <p>
+    The Grandix Magazine is a rich motivational publication produced by Stonepark Media. 
+    It focuses on individuals across Nigeria who have distinguished themselves in their 
+    respective fields of endeavour — both in public and private sectors. The magazine 
+    highlights men and women making significant contributions to the growth and 
+    development of the nation.
+  </p>
+
+  <p>
+    Through compelling interviews, opinion features, professional profiles, and in-depth 
+    analysis, the Grandix Magazine showcases excellence and inspires readers with the 
+    stories of outstanding personalities. Its editorial content covers a wide range of 
+    topics including leadership, entrepreneurship, governance, health, lifestyle, finance, 
+    entertainment, and more.
+  </p>
+
+  <p>
+    With its high-quality print and modern presentation, the Grandix Magazine remains a 
+    trusted source of motivation and information for readers across Nigeria and beyond. 
+    Each issue aims to educate, inspire, and celebrate excellence in society.
+  </p>
+
+  <h2 class="fade-in" style="text-align:center; margin-top:40px; color:var(--navy);">Magazine Preview</h2>
+
+  <!-- 4 IMAGE SLOTS -->
+  <div class="magazine-gallery">
+  <img src="IMG-20250625-WA0020.jpg" alt="Magazine Preview 1" class="fade-in">
+  <img src="IMG-20250625-WA0021.jpg" alt="Magazine Preview 2" class="fade-in">
+  <img src="IMG-20250625-WA0022.jpg" alt="Magazine Preview 3" class="fade-in">
+  <img src="IMG-20251114-WA0019.jpg" alt="Magazine Preview 4" class="fade-in">
+</div>
+
+
+  <!-- BACK BUTTON -->
+  <div class="back-btn">
+    <a class="btn btn-primary" href="index.html#awards">← Back to Home</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Grandix International — Stonepark Media. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- JS (same as main site) -->
+<script>
+  const fadeEls = document.querySelectorAll('.fade-in');
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.18 });
+
+  fadeEls.forEach(el => obs.observe(el));
+
+  const mobileBtn = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+
+  mobileBtn.addEventListener('click', () => {
+    mobileBtn.classList.toggle('open');
+    navLinks.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      mobileBtn.classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Grandix International — Stonepark Media</title>
+  <meta name="description" content="Grandix International — a rich motivational tabloid published by Stonepark Media. Celebrating excellence across Nigeria." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Page-specific tweaks */
+    .about-hero {
+      padding:120px 20px 80px;
+      text-align:center;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url('grandix-team.jpg') center/cover no-repeat;
+      color:#fff;
+    }
+    .about-container {
+      max-width:1000px;
+      margin: -60px auto 60px;
+      background:#fff;
+      border-radius:12px;
+      box-shadow:0 12px 40px rgba(2,6,23,0.06);
+      padding:36px;
+    }
+    .about-container h1 { color:var(--navy); margin-top:0; }
+    .about-container p { color:#333; line-height:1.78; margin-bottom:16px; font-size:1.03rem; }
+    .meta-note { color:var(--muted); font-size:0.95rem; margin-top:8px; }
+    .back-row { display:flex; justify-content:flex-end; margin-top:18px; }
+    .back-row .btn { padding:10px 18px; border-radius:999px; text-decoration:none; }
+    @media (max-width:980px) {
+      .about-container { margin: -40px 20px 30px; padding:24px; }
+      .about-hero { padding:100px 18px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header (same as index) -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-logo">GRANDIX</div>
+        <div class="brand-sub">INTERNATIONAL</div>
+      </a>
+
+      <button id="mobile-menu" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="about-us.html" class="active">About</a></li>
+          <li><a href="index.html#stonepark">Stonepark Media</a></li>
+          <li><a href="index.html#magazine">Magazine</a></li>
+          <li><a href="index.html#awards">Awards</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="about-hero">
+    <div class="container narrow">
+      <h1>About Grandix International</h1>
+      <p class="lead" style="color: #fff;">A rich motivational tabloid published by Stonepark Media — celebrating individuals who have distinguished themselves across Nigeria.</p>
+    </div>
+  </section>
+
+  <!-- Main content (full PDF write-up formatted) -->
+  <main class="about-container fade in-view" role="main">
+    <h1>GRANDIX INTERNATIONAL</h1>
+
+    <p>
+      The Grandix International is a rich motivational tabloid published by the Stonepark Media. The magazine focuses on deserving individuals from all walks of life both in public and private organizations who have distinguished themselves in their various fields of endeavours. It showcases men and women who have made significant and remarkable impact to the political and socio-economic spheres of Nigeria. It also includes insightful features and interesting articles that will be of great benefit to you, your organization and household. Finance, health, relationship, entertainment and sports are also included.
+    </p>
+
+    <h2>STONEPARK MEDIA</h2>
+    <p>
+      Stonepark Media is a digital media full service marketing agency committed to providing unique digital solutions that allows businesses to reach new levels to scale. We are a full service digital agency that has been purposely built to help organizations thrive in an increasingly complex landscape by helping clients break new ground in branding and attract high premium. The Stonepark Media specializes in establishing your brand’s identity. Through crafting of powerful digital strategies rooted in social media marketing, digital advertising and customized creative content and our team of passionate specialists ensure that your story is heard. We craft strategies to drive business growth combining creativity with data driven insights for exceptional results in today’s landscape.
+    </p>
+
+    <p>
+      We are also glad to let you know that we are into services of social media digital advertising, branding creativity and development services, making your brand thrive in today’s digital space.
+    </p>
+
+    <h3>STONEPARK MEDIA (PRINTING, PUBLISHING AND MEDIA CONSULTANCY)</h3>
+    <p>
+      The Stonepark Media also engages in print and publishing including media consultancy. We also conduct trainings, seminars and workshop for private and government agencies across the country. We will expose you to the rudiments of public relations practice. You will learn the modern method and system of protocol in line with world’s best practices. Our organization will share with you the technology of public relations practice in the 21st century and develop a standard set of communications protocol that will be of great benefit to the public relations department of your company smooth discharge of their duties.
+    </p>
+
+    <h2>THE GRANDIX INTERNATIONAL AWARDS FOR EXCELLENCE IN NATION BUILDING 2025</h2>
+    <p>
+      The Stonepark Media, publishers of Grandix International is pleased to inform you of its forth coming annual awards event taking place in the city of Abuja, the Federal Capital Territory in the month of December 2025. This epoch making event is aimed at rewarding headwork and excellence at all ramifications in both public and private sectors. Twenty five deserving Nigerians from all walks of life will be bestowed with different categories of honours in recognition of their hardwork, achievements and unwavering commitment to the growth and development of Nigeria through their various fields of endeavours.
+    </p>
+
+    <div class="meta-note">
+      <p><strong>Note:</strong> This page contains the full published write-up for Grandix International as provided by Stonepark Media.</p>
+    </div>
+
+    <div class="back-row">
+      <a class="btn" href="index.html#about">← Back to Home</a>
+    </div>
+  </main>
+
+  <footer class="site-footer" style="margin-top:40px;">
+    <div class="container">
+      <p>© 2025 Stonepark Media — Grandix International. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Reuse same small JS for menu & animations -->
+  <script>
+    // mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileBtn.addEventListener('click', () => {
+      const expanded = mobileBtn.getAttribute('aria-expanded') === 'true' || false;
+      mobileBtn.setAttribute('aria-expanded', !expanded);
+      mobileBtn.classList.toggle('open');
+      navLinks.classList.toggle('active');
+    });
+
+    // close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileBtn.classList.remove('open');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // simple fade-in (already set .in-view on this page)
+    document.addEventListener('DOMContentLoaded', () => {
+      const f = document.querySelectorAll('.fade');
+      f.forEach(el => el.classList.add('in-view'));
+    });
+
+    // optional: hide header on scroll down
+    (function(){
+      const header = document.querySelector('.site-header');
+      let last = 0;
+      window.addEventListener('scroll', () => {
+        const current = window.pageYOffset || document.documentElement.scrollTop;
+        if (current > last && current > 80) {
+          header.classList.add('hide');
+        } else header.classList.remove('hide');
+        last = Math.max(0, current);
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
